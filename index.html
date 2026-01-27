@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --bg: #fafaf8;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        /* Decorative background element */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.03) 0%, rgba(22, 33, 62, 0.05) 100%);
+            z-index: -1;
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 80px;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .title {
+            font-size: 24px;
+            color: var(--text-light);
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        .contact-info a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 70px;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 35px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+        }
+
+        /* Professional Summary */
+        .summary {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text);
+            max-width: 900px;
+            font-weight: 300;
+        }
+
+        /* Experience & Education Cards */
+        .experience-item,
+        .education-item {
+            background: var(--card);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-left: 3px solid var(--accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .experience-item:hover,
+        .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title,
+        .degree {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .company,
+        .institution {
+            font-size: 18px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        .description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .description li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .description li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: var(--card);
+            padding: 30px;
+            border-top: 3px solid var(--accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-category h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            .name {
+                font-size: 48px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .job-title,
+            .degree {
+                font-size: 22px;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .bg-decoration {
+                width: 70%;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .bg-decoration {
+                display: none;
+            }
+
+            .experience-item,
+            .education-item,
+            .skill-category {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decoration"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="name">Your Name</h1>
+            <p class="title">Professional Title</p>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com">
+                    <span>✉</span> your.email@example.com
+                </a>
+                <a href="tel:+1234567890">
+                    <span>☎</span> +1 (234) 567-890
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                    <span>⚲</span> linkedin.com/in/yourprofile
+                </a>
+                <a href="https://yourportfolio.com" target="_blank">
+                    <span>⚘</span> yourportfolio.com
+                </a>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Results-driven professional with extensive experience in delivering high-impact solutions and driving organizational success. Proven track record of combining technical expertise with strategic thinking to solve complex challenges and exceed expectations. Passionate about continuous learning and leveraging emerging technologies to create innovative solutions.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">Company Name</div>
+                        <h3 class="job-title">Senior Position Title</h3>
+                    </div>
+                    <span class="date">Jan 2022 – Present</span>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Led cross-functional teams to deliver major projects, resulting in 40% improvement in key performance metrics</li>
+                        <li>Developed and implemented strategic initiatives that increased operational efficiency by 35%</li>
+                        <li>Mentored junior team members and established best practices for project execution</li>
+                        <li>Collaborated with stakeholders to align technical solutions with business objectives</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">Previous Company</div>
+                        <h3 class="job-title">Mid-Level Position</h3>
+                    </div>
+                    <span class="date">Jun 2019 – Dec 2021</span>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Managed end-to-end delivery of critical projects with budgets exceeding $500K</li>
+                        <li>Implemented automation solutions that reduced processing time by 50%</li>
+                        <li>Built strong relationships with clients, achieving 95% satisfaction rating</li>
+                        <li>Contributed to team growth by participating in recruitment and onboarding processes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">Early Career Company</div>
+                        <h3 class="job-title">Junior Position</h3>
+                    </div>
+                    <span class="date">Aug 2017 – May 2019</span>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Supported senior team members in executing strategic initiatives</li>
+                        <li>Conducted comprehensive analysis and research to inform decision-making</li>
+                        <li>Developed foundational skills in project management and stakeholder communication</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="institution">University Name</div>
+                        <h3 class="degree">Master of Science in Your Field</h3>
+                    </div>
+                    <span class="date">2015 – 2017</span>
+                </div>
+                <div class="description">
+                    Graduated with Honors • GPA: 3.8/4.0 • Thesis: Research Topic Title
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="institution">University Name</div>
+                        <h3 class="degree">Bachelor of Science in Related Field</h3>
+                    </div>
+                    <span class="date">2011 – 2015</span>
+                </div>
+                <div class="description">
+                    Dean's List • Relevant Coursework: Course 1, Course 2, Course 3
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Business Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Salesforce</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English (Native)</span>
+                        <span class="skill-tag">Spanish (Fluent)</span>
+                        <span class="skill-tag">French (Conversational)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add subtle parallax effect to background decoration
+        window.addEventListener('scroll', () => {
+            const decoration = document.querySelector('.bg-decoration');
+            const scrolled = window.pageYOffset;
+            decoration.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
+    </script>
+</body>
+</html>
