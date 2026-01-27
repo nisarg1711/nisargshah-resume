@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume</title>
+    <meta name="description" content="Nisarg Shah - Software Development Manager with 17+ years of experience in enterprise software development">
+    <meta name="author" content="Nisarg Shah">
+    <title>Nisarg Shah - Software Development Manager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -111,6 +113,12 @@
             color: var(--accent);
         }
 
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         /* Section Styling */
         section {
             margin-bottom: 70px;
@@ -149,6 +157,7 @@
             color: var(--text);
             max-width: 900px;
             font-weight: 300;
+            margin-bottom: 15px;
         }
 
         /* Experience & Education Cards */
@@ -209,6 +218,14 @@
             margin-top: 15px;
         }
 
+        .section-subtitle {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
         .description ul {
             list-style: none;
             padding-left: 0;
@@ -231,7 +248,7 @@
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -350,28 +367,29 @@
     
     <div class="container">
         <header>
-            <h1 class="name">Your Name</h1>
-            <p class="title">Professional Title</p>
+            <h1 class="name">Nisarg Shah</h1>
+            <p class="title">Software Development Manager</p>
             <div class="contact-info">
-                <a href="mailto:your.email@example.com">
-                    <span>✉</span> your.email@example.com
+                <a href="mailto:nisarg1711@gmail.com">
+                    <span>✉</span> nisarg1711@gmail.com
                 </a>
-                <a href="tel:+1234567890">
-                    <span>☎</span> +1 (234) 567-890
+                <a href="tel:+15875819914">
+                    <span>☎</span> +1 (587) 581-9914
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">
-                    <span>⚲</span> linkedin.com/in/yourprofile
+                <a href="https://linkedin.com/in/nisargshah26" target="_blank">
+                    <span>⚲</span> linkedin.com/in/nisargshah26
                 </a>
-                <a href="https://yourportfolio.com" target="_blank">
-                    <span>⚘</span> yourportfolio.com
-                </a>
+                <span>📍 Calgary, AB</span>
             </div>
         </header>
 
         <section>
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Results-driven professional with extensive experience in delivering high-impact solutions and driving organizational success. Proven track record of combining technical expertise with strategic thinking to solve complex challenges and exceed expectations. Passionate about continuous learning and leveraging emerging technologies to create innovative solutions.
+                Results-driven Manager of Software Engineering with <strong>17+ years of progressive experience</strong> including <strong>9+ years in leadership roles</strong>, managing cross-functional engineering teams in enterprise software development. Specializes in API development, microservices architecture, and C#/.NET solutions, driving cloud transformation initiatives and delivering enterprise-scale SaaS products.
+            </p>
+            <p class="summary">
+                Experienced in aligning business vision with detailed technology roadmaps and building high-performance engineering teams. Specialize in Azure cloud solutions, DevSecOps, and engineering capability development, consistently contributing to revenue gains and cost reductions.
             </p>
         </section>
 
@@ -381,17 +399,33 @@
             <div class="experience-item">
                 <div class="item-header">
                     <div>
-                        <div class="company">Company Name</div>
-                        <h3 class="job-title">Senior Position Title</h3>
+                        <div class="company">Optiom Inc.</div>
+                        <h3 class="job-title">Software Development Manager</h3>
                     </div>
-                    <span class="date">Jan 2022 – Present</span>
+                    <span class="date">May 2018 – Present</span>
                 </div>
                 <div class="description">
+                    <div class="section-subtitle">Leadership & Strategy:</div>
                     <ul>
-                        <li>Led cross-functional teams to deliver major projects, resulting in 40% improvement in key performance metrics</li>
-                        <li>Developed and implemented strategic initiatives that increased operational efficiency by 35%</li>
-                        <li>Mentored junior team members and established best practices for project execution</li>
-                        <li>Collaborated with stakeholders to align technical solutions with business objectives</li>
+                        <li>Lead a cross-functional engineering team of developers, QA, DevOps, and support <strong>(up to 8 members)</strong>, fostering a culture of innovation and accountability and maintaining a <strong>90% retention rate</strong></li>
+                        <li>Collaborate with C-suite stakeholders to prioritize and deliver product features that drive revenue and market adoption for a vehicle replacement insurance SaaS platform</li>
+                        <li>Drive talent management including recruitment, performance reviews, succession planning, and professional development — <strong>resulting in multiple promotions to senior roles within 2 years</strong></li>
+                        <li>Instituted enterprise-grade engineering standards, security controls, performance KPIs, and a robust cloud platform, driving a measurable reduction in technical debt and production defects and ensuring <strong>99.9% uptime</strong></li>
+                    </ul>
+                    
+                    <div class="section-subtitle">Technical & Architectural Leadership:</div>
+                    <ul>
+                        <li>Designed and implemented an <strong>Azure-based microservices</strong> platform to replace a legacy monolith, refactoring services into bounded contexts, introducing them into CI/CD, and enabling independent deploys and fault isolation</li>
+                        <li>Led delivery to embed fail-fast <strong>SAST/DAST</strong> controls across pipelines, instituting automatic release blocking for detected vulnerabilities so insecure code never reaches downstream environments, while streamlining pipeline steps to reduce deployment time and enable more frequent releases</li>
+                        <li>Optimized Azure infrastructure (Front Door, Application Gateway, App Services, SQL) with auto-scaling and cost governance, <strong>reducing cloud spend by 25%</strong></li>
+                    </ul>
+                    
+                    <div class="section-subtitle">Operational Excellence:</div>
+                    <ul>
+                        <li>Established formal code-review protocols and structured release-management processes, improving code quality, reducing post-release defects, and increasing deployment predictability</li>
+                        <li>Implemented comprehensive monitoring using Datadog and Application Insights, reducing <strong>MTTR by 70%</strong></li>
+                        <li>Led threat modeling, penetration testing, and OWASP Top 10 remediation across the SDLC; instituted secure-by-default development practices and integrated security checks into sprint workflows</li>
+                        <li>Delivered <strong>5+ major product releases</strong> on time including customer-facing features, reporting modules, accounting integrations, and REST API expansions</li>
                     </ul>
                 </div>
             </div>
@@ -399,115 +433,130 @@
             <div class="experience-item">
                 <div class="item-header">
                     <div>
-                        <div class="company">Previous Company</div>
-                        <h3 class="job-title">Mid-Level Position</h3>
+                        <div class="company">Amnex Technologies</div>
+                        <h3 class="job-title">Software Team Lead / Senior Software Developer</h3>
                     </div>
-                    <span class="date">Jun 2019 – Dec 2021</span>
+                    <span class="date">Aug 2011 – May 2014 & May 2016 – Apr 2018</span>
                 </div>
                 <div class="description">
                     <ul>
-                        <li>Managed end-to-end delivery of critical projects with budgets exceeding $500K</li>
-                        <li>Implemented automation solutions that reduced processing time by 50%</li>
-                        <li>Built strong relationships with clients, achieving 95% satisfaction rating</li>
-                        <li>Contributed to team growth by participating in recruitment and onboarding processes</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
-                        <div class="company">Early Career Company</div>
-                        <h3 class="job-title">Junior Position</h3>
-                    </div>
-                    <span class="date">Aug 2017 – May 2019</span>
-                </div>
-                <div class="description">
-                    <ul>
-                        <li>Supported senior team members in executing strategic initiatives</li>
-                        <li>Conducted comprehensive analysis and research to inform decision-making</li>
-                        <li>Developed foundational skills in project management and stakeholder communication</li>
+                        <li>Led <strong>cross-functional teams of 12+ members</strong> managing full SDLC for government and enterprise clients with <strong>$500K+ project portfolios</strong></li>
+                        <li>Delivered high-impact solutions including <strong>NMMT Bus Tracker</strong> (2M+ passengers), <strong>Adani Ports Fleet Management</strong> (500+ vehicles), <strong>Smart City IoT platforms</strong>, and <strong>Surat BRTS Transit System</strong> with automated vehicle location and smart card ticketing</li>
+                        <li>Architected and integrated diverse hardware ecosystems (RFID, GPS, biometric, POS, smart cards) with enterprise software platforms</li>
+                        <li>Implemented Business Intelligence solutions using SSRS/SSIS for executive reporting and data-driven decision making</li>
+                        <li>Established code review processes, mentoring programs, and technical standards; <strong>hired and developed 15+ engineers</strong></li>
+                        <li>Applied software design patterns, SOLID principles, and security best practices ensuring scalable, maintainable solutions</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Education & Certifications</h2>
             
             <div class="education-item">
                 <div class="item-header">
                     <div>
-                        <div class="institution">University Name</div>
-                        <h3 class="degree">Master of Science in Your Field</h3>
+                        <div class="institution">Gujarat University, India</div>
+                        <h3 class="degree">Bachelor of Engineering in Computer Engineering</h3>
                     </div>
-                    <span class="date">2015 – 2017</span>
-                </div>
-                <div class="description">
-                    Graduated with Honors • GPA: 3.8/4.0 • Thesis: Research Topic Title
+                    <span class="date">2004 – 2008</span>
                 </div>
             </div>
 
             <div class="education-item">
                 <div class="item-header">
                     <div>
-                        <div class="institution">University Name</div>
-                        <h3 class="degree">Bachelor of Science in Related Field</h3>
+                        <h3 class="degree" style="font-size: 22px;">Professional Certifications</h3>
                     </div>
-                    <span class="date">2011 – 2015</span>
                 </div>
                 <div class="description">
-                    Dean's List • Relevant Coursework: Course 1, Course 2, Course 3
+                    <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> — February 2025<br/>
+                    <strong>ISC2 Certified in Cybersecurity (CC)</strong> — October 2024<br/>
+                    <strong>ISC2 CSSLP</strong> — Ongoing
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">Skills & Expertise</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Technical Skills</h3>
+                    <h3>Leadership & Strategy</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Docker</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Business Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Engineering Team Leadership</span>
+                        <span class="skill-tag">Technical Roadmap</span>
+                        <span class="skill-tag">Budget & Resource Management</span>
+                        <span class="skill-tag">Talent Development</span>
+                        <span class="skill-tag">Stakeholder Engagement</span>
                         <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Data Analysis</span>
-                        <span class="skill-tag">Strategic Planning</span>
-                        <span class="skill-tag">Stakeholder Management</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Cloud & Architecture</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">App Services</span>
+                        <span class="skill-tag">Azure Functions</span>
+                        <span class="skill-tag">Application Gateway</span>
+                        <span class="skill-tag">Front Door + WAF</span>
+                        <span class="skill-tag">SQL Database</span>
+                        <span class="skill-tag">Key Vault</span>
+                        <span class="skill-tag">Load Balancing</span>
+                        <span class="skill-tag">High Availability</span>
+                        <span class="skill-tag">Cloud Cost Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET Core/Framework</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">ASP.NET MVC</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">Entity Framework</span>
+                        <span class="skill-tag">Design Patterns</span>
+                        <span class="skill-tag">TDD</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>API & Integration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST API Development</span>
+                        <span class="skill-tag">API Gateway Management</span>
+                        <span class="skill-tag">Microservices Integration</span>
+                        <span class="skill-tag">Web Services</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>DevSecOps & Security</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
                         <span class="skill-tag">Git</span>
-                        <span class="skill-tag">JIRA</span>
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Salesforce</span>
-                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">DevOps Dashboards</span>
+                        <span class="skill-tag">SAST/DAST</span>
+                        <span class="skill-tag">OWASP Top 10</span>
+                        <span class="skill-tag">PCI DSS Compliance</span>
+                        <span class="skill-tag">Threat Modeling</span>
+                        <span class="skill-tag">Penetration Testing</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3>Tools & Monitoring</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">English (Native)</span>
-                        <span class="skill-tag">Spanish (Fluent)</span>
-                        <span class="skill-tag">French (Conversational)</span>
+                        <span class="skill-tag">Application Insights</span>
+                        <span class="skill-tag">Datadog</span>
+                        <span class="skill-tag">SonarQube</span>
+                        <span class="skill-tag">Tenable WAS</span>
                     </div>
                 </div>
             </div>
@@ -529,8 +578,10 @@
         // Add subtle parallax effect to background decoration
         window.addEventListener('scroll', () => {
             const decoration = document.querySelector('.bg-decoration');
-            const scrolled = window.pageYOffset;
-            decoration.style.transform = `translateY(${scrolled * 0.1}px)`;
+            if (decoration) {
+                const scrolled = window.pageYOffset;
+                decoration.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
         });
     </script>
 </body>
